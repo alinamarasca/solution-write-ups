@@ -63,7 +63,7 @@ This is just a simple an example scenario to remind us that when we writing prod
 
 <!-- copy this section for every solution you study -->
 
-## [yoon]([link-to-user)](https://edabit.com/challenge/Q3n42rEWanZSTmsJm)
+## [yoon link](https://edabit.com/challenge/Q3n42rEWanZSTmsJm)
 
 ```js
 function minMax(arr) {
