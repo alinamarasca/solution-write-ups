@@ -8,21 +8,21 @@ its a function that allows you to find the biggest and smallest number in an arr
 ## Syntax
 
 > functionName(`type`, `type`, ...) -> `type`
-> minMax('arr') -> 'array'
+> // minMax('arr') -> 'array' the function will work with array
 
 ### Parameters
 
 **paramName**: `paramType`
-**arr**: 'array' // QUESTION
+**arr**: 'array'
 
 ```
-the parameter name is arr and type of it is a number.
+the parameter name is arr and type of it is an array.
 ```
 
-### Return Value: `array` //QUESTION
+### Return Value: `array`
 
 ```
-returns values are numbers, the biggest and smallest from an array.
+returns value is an array , inside of it can be any 'item/element'.
 ```
 
 ## Test Cases
@@ -40,14 +40,19 @@ if you write your own test cases in a sandbox file, include those too
 
 minMax([null, 0, 1]) -> [null, 1]
 
+minMax ([apple, pear, banana]) -> [apple, pear]
+
 ```
 
 ## Use Cases
 
 ```
 1. use case:
-in data analysis to determine the highest and the lowest.
+in data analysis to determine the highest and the lowest number
+
 2. use case:
+
+range of values
 
 
 what is edge cases?
@@ -98,10 +103,8 @@ function minMax(arr) {
 ### Strategy
 
 ```
-this problem has two possible arguments and return values (the biggest and smallest from an array). Yoon chose the strategy of declare two variables where store the value of 'for' loop. The iteration of loop goes until reach minimum value and max value. Finally, push the max and min of array to a bigger container that is declare as a variable to show the result.
-
-
-
+this problem has two return values (the biggest and smallest) from a list of things given by user.
+Inside of this list of thing Yoon compares items in sequence.
 
 ```
 
@@ -127,7 +130,8 @@ function minMax(arr) {
   var min = arr[0];
   var max = arr[0];
 
-  for (var i = 1; i < arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
+    // changed with 0
     if (arr[i] < min) {
       min = arr[i];
     }
