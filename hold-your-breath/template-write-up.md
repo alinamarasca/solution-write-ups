@@ -1,46 +1,53 @@
-# [challengeName](link-to-challenge)
+# [Hold Your Breath!](https://edabit.com/challenge/KxMhoaDkyC2CiNGQx)
 
 ```
-describe the function's behavior in your own words.
-explain why someone might want to use this function
+We have 10 points. Given random numbers if number is negative we subtract 2 points and if it is positive we add 4 points. We cap our points to 10.
 ```
 
 ## Syntax
 
 > functionName(`type`, `type`, ...) -> `type`
+> divingMinigame (arr) -> array
 
 ### Parameters
 
 **paramName**: `paramType`
+**arr**: array
 
 ```
-describe the parameter
+parameter is array with positive and negative numbers.
 ```
 
-### Return Value: `type`
+### Return Value: `boolean`
 
 ```
-describe the return value
+we return true or false value
 ```
 
 ## Test Cases
 
 ```
-copy in the test cases from the original challenge
+divingMinigame([-5, -15, -4, 0, 5]) ➞ true
 
-if you write your own test cases in a sandbox file, include those too
+// Breath meter starts at 10.
+// -5 is below water, so breath meter decreases to 8.
+// -15 is below water, so breath meter decreases to 6.
+// -4 is below water, so breath meter decreases to 4.
+// 0 is at sea level, so breath meter increases to 8.
+// 5 is above sea level and breath meter is capped at 10 (would've been 12 otherwise).
+// Character survives!
 ```
 
 ## Use Cases
 
 ```
-write a minimum of 2 use cases to show this functions behavior.
+1.
+video game which counts lives
 
-try to find interesting _edge cases_, it's good for you ;)
-an edge case is when a function behaves different than you'd expect.
-This will help you and others better understand the function.
+2.
+to compare kind of color to get in the end (negative = yellow and positive = green)
 
-https://www.geeksforgeeks.org/dont-forget-edge-cases/
+
 ```
 
 ---
@@ -49,7 +56,7 @@ https://www.geeksforgeeks.org/dont-forget-edge-cases/
 
 <!-- copy this section for every solution you study -->
 
-## [userName](link-to-user)
+## [ABO](https://edabit.com/challenge/KxMhoaDkyC2CiNGQx)
 
 ```js
 // paste their solution here
@@ -58,26 +65,19 @@ https://www.geeksforgeeks.org/dont-forget-edge-cases/
 ### Strategy
 
 ```
-Describe what strategy they used to pass this challenge.
-Careful! your strategy description should not mention
-  the code they wrote to solve the challenge.
+He compares given numbers in sequences and subtracts 2 points if numbers are negative and add 4 points if numbers are positive. If we get more than 10 he caps to 10.
 
-Practice describing their strategy at a higher level:
-a simple way to understand strategy is to think of the important steps
-between the argument values and the return values.
-
-For example if they use a `for` loop
-you won't mention that `i` was incremented,
-but you might mention how the final result changes at each iteration.
 ```
 
 ### Implementation
 
 ```
-Describe the solution written by this user.
-How did they use JS to implement their strategy?
-What language features did they use?
-What decisions do you think they made and why?
+he creates variables for breath and stepper
+he creates stepper to go through array
+he subtracts and adds points depending of value (positive or negative)
+If breath is more than 10 he caps to 10.
+he returns false if breaths are 0 or negative and he returns true if breaths are more than 0.
+
 ```
 
 ### Possible Refactors
