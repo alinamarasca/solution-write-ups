@@ -46,7 +46,7 @@ minMax([null, 0, 1]) -> [null, 1]
 
 ```
 1. use case:
-
+in data analysis to determine the highest and the lowest.
 2. use case:
 
 
@@ -63,7 +63,7 @@ This is just a simple an example scenario to remind us that when we writing prod
 
 <!-- copy this section for every solution you study -->
 
-## [yoon]([link-to-user)](https://edabit.com/challenge/Q3n42rEWanZSTmsJm)
+## [yoon](https://edabit.com/challenge/Q3n42rEWanZSTmsJm)
 
 ```js
 function minMax(arr) {
@@ -109,21 +109,30 @@ if statement : checks true or false, numbers than are small than i for min and b
 return statement is needed: push or add the min and max from if statement to returnArr container.
 
 
-
-
 ```
 
 ### Possible Refactors
 
-```
-List a couple changes you could make in their code without changing their strategy.
-For example:
-  `while` loops and `for` loops can often be interchanged.
-  `if else`, `switch case` and `_ ? _ : _` can sometimes be interchanged.
+```js NOT FOUND ANOTHER WAY TO DO THIS
+function minMax(arr) {
+  var returnArr = [];
+  var min = arr[0];
+  var max = arr[0];
 
-You don't need to actually rewrite the function.
-The goal of this section is that you exploring different JS language features
-and think of different ways to implement the same strategy.
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  returnArr.push(min);
+  returnArr.push(max);
+
+  return returnArr;
+}
 ```
 
 ### References
@@ -175,4 +184,31 @@ this might include:
 - something that you still don't understand but want to keep studying
 - something that surprised you
 - tricks you will want to remember and use later
+```
+
+## [evan](https://edabit.com/challenge/Q3n42rEWanZSTmsJm)
+
+```js
+function minMax(arr) {
+  // function name is minMax and type is an array
+  arr.sort(function (a, b) {
+    return a - b;
+  }); // sort method allows to sort elements of an array in place. Besides returning the sorted array, sort method changes the positions of the elements in the original array. By default, the sort method sorts the array elements in ascending order with the smallest value first and largest value last. So that is why here, a = 3, b = 4. This method will do ascending order. SO IT WILL BE [-1,3,4,8,152]
+
+  return [arr[0], arr[arr.length - 1]]; // here it return the 0 index of array and last index of array.
+}
+
+minMax([4, 3, 8, 152, -1]); // call function -> result is [-1, 152]
+```
+
+### Strategy
+
+```
+Evan's strategy is using a sort method where modify the order of the array. This method will do ascending order.
+```
+
+### Implementation
+
+```
+
 ```
